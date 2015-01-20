@@ -21,7 +21,7 @@
     $().ready(function() {
         addPrintRules();
 
-        var printLink = $('<a href="#" class="icon icon-copy" data-rb-print="AWESOME" rel="nofollow">Print as Story</a>').on('click', print);
+        var printLink = $('<a href="#" class="icon icon-copy">Print as Story</a>').on('click', print);
         $('#content .contextual').append(printLink);
     });
 })(jQuery);
