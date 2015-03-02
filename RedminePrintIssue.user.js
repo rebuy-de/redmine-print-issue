@@ -15,7 +15,7 @@
     };
 
     var addPrintRules = function() {
-        $('body').append("<style type='text/css'>@media only print {  #top-menu, #header, #footer, #sidebar, hr, .author, .attributes, #issue_tree, #relations, #history, #issue-changesets, .contextual, .other-formats, .attachments {display: none;} div.issue {background: none; border:none; }</style>");
+        $('body').append("<style type='text/css'>@media only print {  #top-menu, #header, #footer, #sidebar, hr, .author, .attributes, #issue_tree, #relations, #history, #issue-changesets, .contextual, .other-formats, .attachments {display: none;} div.issue {background: none; border:none; } h2,h3 {font-size: 24px;}</style>");
     };
 
     $().ready(function() {
