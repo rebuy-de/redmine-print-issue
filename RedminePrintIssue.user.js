@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Redmine Story printing
 // @namespace    http://www.rebuy.de
-// @version      0.1
+// @version      0.2
 // @description  Removes all unnecessary elements to print the redmine issue as a scrum story
 // @author       Ota Mares <o.mares@rebuy.de>
 // @match        http://*/issues/*
@@ -15,7 +15,7 @@
     };
 
     var addPrintRules = function() {
-        $('body').append("<style type='text/css'>@media only print {  #top-menu, #header, #footer, #sidebar, hr, .author, .attributes, #issue_tree, #relations, #history, .contextual, .other-formats {display: none;} div.issue {background: none; border:none; } }</style>");
+        $('body').append("<style type='text/css'>@media only print {  #top-menu, #header, #footer, #sidebar, hr, .author, .attributes, #issue_tree, #relations, #history, #issue-changesets, .contextual, .other-formats, .attachments {display: none;} div.issue {background: none; border:none; } h2,h3 {font-size: 24px;}</style>");
     };
 
     $().ready(function() {
@@ -25,4 +25,3 @@
         $('#content .contextual').append(printLink);
     });
 })(jQuery);
-
